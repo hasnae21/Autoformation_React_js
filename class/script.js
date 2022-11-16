@@ -4,7 +4,6 @@ class Car extends React.Component {
     }
 }
 
-// ReactDOM.render(<Car/>,document.getElementById('app'));
 
 const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(<Car />);
