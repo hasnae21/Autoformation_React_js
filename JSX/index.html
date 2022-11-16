@@ -7,30 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+
     <title>React JSX test</title>
 </head>
 
 <body>
     <div style="margin:5% 5%">
 
-        <div id="myElement">
+        <div id="app">
         </div>
 
     </div>
 </body>
 
-<script type="text/babel">
+<script type="text/babel" defer>
 
-    import React from 'react';
-    import ReactDOM from 'react-dom/client';
+    const myElement = <h1>I Love JSX!</h1>                                      //with JSX
+    // const myElement = React.createElement('h1', {}, 'I do not use JSX!');    //without JSX
 
-    const myElement = <h1>I Love JSX!</h1>;                                    //with JSX
-    // const myElement = React.createElement('h1', {}, 'I do not use JSX!');   //without JSX
-
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(myElement);
-
+    ReactDOM.render(myElement, document.getElementById('app'));
 
 </script>
 
