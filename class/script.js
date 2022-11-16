@@ -75,6 +75,6 @@ ReactDOM.render(<Garage />,document.getElementById('ro'));
 
 
 // Components in Files
-
 // import Hasnae from './Name.js';
 ReactDOM.render(<Hasnae />,document.getElementById('roo'));
+
