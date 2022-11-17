@@ -10,19 +10,17 @@
 // ReactDOM.render(<Football />,document.getElementById('root'));
 
 
-// function Football() {
-//       const shoot = (a) => {
-//           alert(a);
-//         }
+function Football() {
+      const shoot = (a) => {
+          alert(a);
+        }
     
-//         return (
-//             <button onClick={() => shoot("Goaaaaaaal!")}>shoot!</button>
-//     );
-//   }
+        return (
+            <button onClick={() => shoot("Goaaaaaaal!")}>shoot!</button>
+    );
+  }
   
-// ReactDOM.render(<Football />,document.getElementById('root'));
-
-
+ReactDOM.render(<Football />,document.getElementById('root1'));
 
 function ActionLink() {
   function handleClick(a) {
@@ -36,4 +34,4 @@ function ActionLink() {
     </a>
   );
 }
-ReactDOM.render(<ActionLink />,document.getElementById('root'));
+ReactDOM.render(<ActionLink />,document.getElementById('root2'));

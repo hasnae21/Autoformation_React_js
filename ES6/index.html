@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+    <div id="demo2"></div>
+
+    <script type="text/babel" >
+
+        //                                                                       Array Methods
+        const myArray = ['apple', 'banana', 'orange'];
+        const myList = myArray.map((item) => <p>{item}</p>)
+
+        ReactDOM.render(myList, document.getElementById('root'));
+
+
+        //                                                                     Destructuring Arrays
+        // function calculate(a, b) {
+        //     const add = a + b;
+        //     const subtract = a - b;
+        //     const multiply = a * b;
+        //     const divide = a / b;
+
+        //     return [add, subtract, multiply, divide];
+        // }
+        // const [add, subtract, multiply, divide] = calculate(4, 7);
+
+        // document.write("<p>Sum: " + add + " Difference: " + subtract + " Product: " + multiply + " Quotient: " + divide + "</p>");
+
+
+        //                                                                     Destructuring Objects
+        const vehicleOne = {
+            brand: 'Ford',
+            model: 'Mustang',
+            type: 'car',
+            year: 2021,
+            color: 'red'
+        }
+
+        myVehicle(vehicleOne);
+
+        function myVehicle({ type, color, brand, model }) {
+            const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model ;
+
+            document.getElementById("demo").innerHTML = message;
+        }
+
+        </script>
+
+        <script type="module">
+            
+            //                                                                Modules(import and export)
+            import { name, age } from "./person.js";
+            document.getElementById("demo2").innerHTML = "My name is " + name + ", I am " + age + ".";
+    
+            import message from "./message.js";
+            document.getElementById("demo1").innerHTML = message();
+
+        </script>
+</body>
+
+</html>
