@@ -1,9 +1,11 @@
 function MyForm() {
     return (
         <form>
-            <label>Enter your name:
-                <input type="text" />
+            <label>
+                Nom :
+                <input type="text" name="name" />
             </label>
+            <input type="submit" value="Envoyer" />
         </form>
     )
 }
